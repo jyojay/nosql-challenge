@@ -8,7 +8,11 @@ This repository contains:
 
 # Notes:
 * Jupyter Notebook used
-* **Please note that for Question 2 of analysis section, establishments in London having a RatingValue greater than or equal to 4 is 33 after converting numeric RatingValue to Int. I have directly queried the database and double checked this as well. The result expected in Canvas has to be reviewed and will come up as 34 only if string to Int conversion is not done and string comparison is done to fir RatingValue $gte 4 since non-numeric value is also included in the result**.
+* **Please note that for Question 2 of analysis section, establishments in London having a RatingValue greater than or equal to 4 is 33 after converting numeric RatingValue to Int. I have directly queried the database and double checked this as well. The result expected in Canvas has to be reviewed and will come up as 34 only if string to Int conversion is not done and string comparison is done for RatingValue $gte 4 since non-numeric value is also included in the result**.
+* **I have converted RatingValue to int only in NoSQL_analysis_starter**
 
 # Assumption:
-*  to find BusinessTypeID corresponding to 'BusinessType': 'Restaurant/Cafe/Canteen', find_one was used assuming BusinessTypeID should be standard. Wecould have also used find and got all occurences of the same.
+*  To find BusinessTypeID corresponding to 'BusinessType': 'Restaurant/Cafe/Canteen', find_one was used assuming BusinessTypeID should be standard. Wecould have also used find and got all occurences of the same.
+
+# References:
+* https://www.mongodb.com/docs/manual/reference/method/db.collection.distinct/
